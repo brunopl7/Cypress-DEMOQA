@@ -1,0 +1,6 @@
+{
+  "devDependencies": {
+    "cypress": "^15.21.1",
+    "dotenv": "^18.0.4"
+  }
+}
