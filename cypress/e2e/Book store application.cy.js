@@ -1,7 +1,6 @@
 describe('Book store applications', () => {  
   it('Register', () => {
-    cy.viewport(1920, 1080)
-    cy.visit('https://demoqa.com/')
+    cy.visit('')
     cy.contains('Book Store Application').click()
     cy.get(':nth-child(6) > .element-list > .menu-list > #item-0 > .router-link > .text', { timeout: 10000 }).click()
     cy.get('#newUser').click()
@@ -13,8 +12,6 @@ describe('Book store applications', () => {
     cy.env(['PASSWORD']).then(({ PASSWORD }) => {
       cy.get('#password').type(PASSWORD, { log: false })
     })
-
-
   })
 })
 

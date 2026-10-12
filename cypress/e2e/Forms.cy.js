@@ -1,7 +1,6 @@
 describe('template spec', () => {
   it('Fill form data', () => {
-    cy.viewport(1920, 1080)
-    cy.visit('https://demoqa.com/')
+    cy.visit('')
     cy.contains('Elements').click()
     cy.contains('Forms').click()
     cy.contains('Practice Form').click()
@@ -23,8 +22,5 @@ describe('template spec', () => {
     })
 
     cy.get('#submit').click()
-
-
-
   })
 })
