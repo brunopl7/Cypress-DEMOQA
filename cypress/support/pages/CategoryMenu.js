@@ -6,14 +6,24 @@
  * so call openGroup() for any other group before openItem().
  */
 class CategoryMenu {
+  /**
+   * Expands the given sidebar group so its items become clickable.
+   *
+   * @param {string} groupName - Visible group header text (e.g. "Forms").
+   * @returns {this}
+   */
   openGroup(groupName) {
-    cy.contains('.group-header', groupName, { timeout: 10000 }).click()
-    return this
+    return cy.contains('.group-header', groupName, { timeout: 10000 }).click()
   }
 
+  /**
+   * Clicks an item within the currently expanded group(s).
+   *
+   * @param {string} itemName - Visible item text (e.g. "Practice Form").
+   * @returns {this}
+   */
   openItem(itemName) {
-    cy.contains('.menu-list .text', itemName, { timeout: 10000 }).click()
-    return this
+    return cy.contains('.menu-list .text', itemName, { timeout: 10000 }).click()
   }
 }
 
