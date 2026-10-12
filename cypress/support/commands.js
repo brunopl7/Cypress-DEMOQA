@@ -64,5 +64,4 @@ Cypress.Commands.add('fillbooksregister', (dados) => {
   cy.get('#firstname').type(dados.firstName)
   cy.get('#lastname').type(dados.lastName)
   cy.get('#userName').type(dados.userName)
-  
 })
